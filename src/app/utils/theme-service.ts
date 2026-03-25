@@ -31,10 +31,6 @@ export class ThemeService {
     this.themeChanges$.next(theme);
   }
 
-  getTheme(): string | null {
-    return localStorage.getItem(this.themeKey);
-  }
-
   setDefaultTheme() {
     const theme: string | null = localStorage.getItem(this.themeKey);
     if (theme && this.isTheme(theme)) {
