@@ -1,1 +1,6 @@
-<p-button icon="pi pi-sun" [text]="true" (onClick)="themeService.toggleTheme()" />
+<p-button
+  [icon]="btnIcon()"
+  [text]="true"
+  severity="secondary"
+  (onClick)="themeService.toggleTheme()"
+/>

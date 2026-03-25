@@ -1,25 +1,43 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { Theme } from '../types/types';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
-  private setTheme(theme: 'light' | 'dark') {
-    localStorage.setItem('theme', theme);
+  private themeKey: string = 'theme';
+  private themeChanges$: BehaviorSubject<Theme> = new BehaviorSubject<Theme>('light');
+
+  get themeChanges() {
+    return this.themeChanges$.asObservable();
+  }
+
+  private isTheme(value: string): value is Theme {
+    return value === 'light' || value === 'dark';
+  }
+
+  private setTheme(theme: Theme) {
+    localStorage.setItem(this.themeKey, theme);
     const htmlElem: HTMLHtmlElement | null = document.querySelector('html');
     if (!htmlElem) {
       return;
     }
-    if (theme == 'light') {
+    if (theme === 'light') {
       htmlElem.classList.remove('theme-dark');
     } else {
       htmlElem.classList.add('theme-dark');
     }
+    this.themeChanges$.next(theme);
+  }
+
+  getTheme(): string | null {
+    return localStorage.getItem(this.themeKey);
   }
 
   setDefaultTheme() {
-    const theme: string | null = localStorage.getItem('theme');
-    if (theme && (theme == 'light' || theme == 'dark')) {
+    const theme: string | null = localStorage.getItem(this.themeKey);
+    if (theme && this.isTheme(theme)) {
       this.setTheme(theme);
       return;
     }
@@ -32,11 +50,12 @@ export class ThemeService {
   }
 
   toggleTheme() {
-    const theme: string | null = localStorage.getItem('theme');
-    if (!theme || (theme != 'light' && theme != 'dark')) {
+    const theme: string | null = localStorage.getItem(this.themeKey);
+    if (!theme || !this.isTheme(theme)) {
+      this.setDefaultTheme();
       return;
     }
-    if (theme == 'light') {
+    if (theme === 'light') {
       this.setTheme('dark');
     } else {
       this.setTheme('light');
