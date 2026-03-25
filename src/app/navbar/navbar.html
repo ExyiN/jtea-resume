@@ -1,6 +1,12 @@
 <p-menubar [model]="items" breakpoint="48rem">
   <ng-template #item let-item>
-    <a pRipple class="flex items-center gap-4 p-3 rounded-2xl">
+    <a
+      pRipple
+      class="flex items-center gap-4 p-3 rounded-2xl"
+      [pTooltip]="item.label"
+      tooltipPosition="bottom"
+      [pTooltipPT]="tooltipPT"
+    >
       <i [class]="item.icon"></i>
       <span class="md:hidden">{{ item.label }}</span>
     </a>

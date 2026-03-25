@@ -1,5 +1,6 @@
 import { MenubarDesignTokens } from '@primeuix/themes/types/menubar';
 import { MenubarPassThrough } from 'primeng/menubar';
+import { TooltipPassThrough } from 'primeng/types/tooltip';
 
 export const MenubarStyle: MenubarDesignTokens = {
   root: {
@@ -19,9 +20,15 @@ export const MenubarStyle: MenubarDesignTokens = {
 
 export const MenubarPT: MenubarPassThrough = {
   rootList: {
-    class: 'max-md:!mt-2'
+    class: 'max-md:!mt-2',
   },
   button: {
     class: 'p-3 !size-auto',
+  },
+};
+
+export const MenubarTooltipPT: TooltipPassThrough = {
+  root: {
+    class: 'max-md:!hidden',
   },
 };

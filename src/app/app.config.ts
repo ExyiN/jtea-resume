@@ -4,6 +4,7 @@ import { provideRouter } from '@angular/router';
 import { providePrimeNG } from 'primeng/config';
 import AppTheme from '../styles/app-theme';
 import { MenubarPT } from '../styles/menubar';
+import { TooltipPT } from '../styles/tooltip';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -20,6 +21,7 @@ export const appConfig: ApplicationConfig = {
       ripple: true,
       pt: {
         menubar: MenubarPT,
+        tooltip: TooltipPT,
       },
     }),
   ],

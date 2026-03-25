@@ -3,6 +3,8 @@ import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
 import { RippleModule } from 'primeng/ripple';
 import { TooltipModule } from 'primeng/tooltip';
+import { TooltipPassThrough } from 'primeng/types/tooltip';
+import { MenubarTooltipPT } from '../../styles/menubar';
 
 @Component({
   selector: 'app-navbar',
@@ -12,6 +14,7 @@ import { TooltipModule } from 'primeng/tooltip';
 })
 export class Navbar implements OnInit {
   protected items?: MenuItem[];
+  protected tooltipPT: TooltipPassThrough = MenubarTooltipPT;
 
   ngOnInit(): void {
     this.items = [
