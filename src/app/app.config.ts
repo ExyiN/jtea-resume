@@ -1,8 +1,10 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-import Aura from '@primeuix/themes/aura';
 import { providePrimeNG } from 'primeng/config';
+import AppTheme from '../styles/app-theme';
+import { MenubarPT } from '../styles/menubar';
+import { TooltipPT } from '../styles/tooltip';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -11,12 +13,16 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     providePrimeNG({
       theme: {
-        preset: Aura,
+        preset: AppTheme,
         options: {
           darkModeSelector: 'theme-dark',
         },
       },
       ripple: true,
+      pt: {
+        menubar: MenubarPT,
+        tooltip: TooltipPT,
+      },
     }),
   ],
 };
