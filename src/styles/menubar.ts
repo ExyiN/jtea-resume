@@ -1,6 +1,7 @@
 import { MenubarDesignTokens } from '@primeuix/themes/types/menubar';
+import { MenubarPassThrough } from 'primeng/menubar';
 
-const MenubarStyle: MenubarDesignTokens = {
+export const MenubarStyle: MenubarDesignTokens = {
   root: {
     borderRadius: '1rem',
     padding: '0.25rem 1rem',
@@ -11,6 +12,16 @@ const MenubarStyle: MenubarDesignTokens = {
   baseItem: {
     borderRadius: '1rem',
   },
+  mobileButton: {
+    borderRadius: '1rem',
+  },
 };
 
-export default MenubarStyle;
+export const MenubarPT: MenubarPassThrough = {
+  rootList: {
+    class: 'max-md:!mt-2'
+  },
+  button: {
+    class: 'p-3 !size-auto',
+  },
+};

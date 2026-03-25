@@ -1,8 +1,9 @@
 import { definePreset } from '@primeuix/themes';
 import Aura from '@primeuix/themes/aura';
-import MenubarStyle from './menubar';
+import { Preset } from '@primeuix/themes/types';
+import { MenubarStyle } from './menubar';
 
-const AppTheme = definePreset(Aura, {
+const AppTheme: Preset = definePreset(Aura, {
   components: {
     menubar: MenubarStyle,
   },
