@@ -5,10 +5,11 @@ import { RippleModule } from 'primeng/ripple';
 import { TooltipModule } from 'primeng/tooltip';
 import { TooltipPassThrough } from 'primeng/types/tooltip';
 import { MenubarTooltipPT } from '../../styles/menubar';
+import { ToggleThemeButton } from '../toggle-theme-button/toggle-theme-button';
 
 @Component({
   selector: 'app-navbar',
-  imports: [MenubarModule, RippleModule, TooltipModule],
+  imports: [MenubarModule, RippleModule, TooltipModule, ToggleThemeButton],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
