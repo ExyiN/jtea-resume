@@ -1,5 +1,7 @@
 import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
+import { ButtonDesignTokens } from '@primeuix/themes/types/button';
 import { ButtonModule } from 'primeng/button';
+import { IconOnlyButtonStyle } from '../../styles/button';
 import { Theme } from '../types/types';
 import { ThemeService } from '../utils/theme-service';
 
@@ -12,6 +14,7 @@ import { ThemeService } from '../utils/theme-service';
 export class ToggleThemeButton implements OnInit {
   protected themeService: ThemeService = inject(ThemeService);
   protected btnIcon: WritableSignal<string> = signal('pi pi-sun');
+  protected iconOnlyButtonStyle: ButtonDesignTokens = IconOnlyButtonStyle;
 
   ngOnInit(): void {
     this.themeService.themeChanges.subscribe((theme: Theme) => {
