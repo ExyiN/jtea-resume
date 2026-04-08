@@ -1,12 +1,17 @@
-<p-panel>
+<div
+  class="h-full flex items-center justify-center"
+  style="
+    background: var(--p-panel-background);
+    border: 1px solid var(--p-panel-border-color);
+    border-radius: var(--p-panel-border-radius);
+    padding: var(--p-panel-content-padding);
+    padding-top: var(--p-panel-header-padding);
+    color: var(--p-panel-color);
+  "
+>
   <div class="grid grid-cols-1 gap-4 place-items-center">
-    <p class="col-span-full md:text-5xl text-4xl font-black text-center">Jacques Tea</p>
-    <p class="col-span-full md:text-2xl text-xl font-semibold text-center">Ingénieur Développeur Fullstack</p>
-    <p-button
-      label="Télécharger mon CV"
-      icon="pi pi-download"
-      iconPos="right"
-    />
+    <p class="md:text-5xl text-4xl font-black text-center text-primary">Jacques Tea</p>
+    <p class="md:text-2xl text-xl font-semibold text-center">Ingénieur Développeur Fullstack</p>
+    <p-button label="Télécharger mon CV" icon="pi pi-download" iconPos="right" />
   </div>
-  <ng-template #footer></ng-template>
-</p-panel>
+</div>
