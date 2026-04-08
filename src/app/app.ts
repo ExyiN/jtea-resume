@@ -4,10 +4,11 @@ import { HomePage } from './pages/home-page/home-page';
 import { ProfilePage } from './pages/profile-page/profile-page';
 import { ThemeService } from './utils/theme-service';
 import { HardSkillsPage } from "./pages/hard-skills-page/hard-skills-page";
+import { SoftSkillsPage } from "./pages/soft-skills-page/soft-skills-page";
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, HomePage, ProfilePage, HardSkillsPage],
+  imports: [Navbar, HomePage, ProfilePage, HardSkillsPage, SoftSkillsPage],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
