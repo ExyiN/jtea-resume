@@ -1,1 +1,37 @@
-<p>profile-page works!</p>
+<p-panel>
+  <ng-template #header>
+    <p class="md:text-4xl text-3xl font-bold">Profil</p>
+  </ng-template>
+  <p>
+    Développeur motivé, curieux et capable de travailler dans un contexte international. Je suis à
+    la recherche d'un poste de développeur Fullstack sur Angular et Java. Je suis ouvert à d'autres
+    environnements
+  </p>
+  <p-divider />
+  <div class="grid lg:grid-cols-2 lg:grid-rows-3 lg:grid-flow-col grid-cols-1 gap-4">
+    <a href="mailto:teajacques@gmail.com">
+      <div class="flex items-center gap-2">
+        <i class="pi pi-at"></i><span class="underline">teajacques@gmail.com</span>
+      </div>
+    </a>
+    <a href="tel:0695443217">
+      <div class="flex items-center gap-2">
+        <i class="pi pi-mobile"></i><span class="underline">0695443217</span>
+      </div>
+    </a>
+    <div class="flex items-center gap-2">
+      <i class="pi pi-map-marker"></i><span>Île-de-France</span>
+    </div>
+    <a href="https://www.linkedin.com/in/jacques-tea">
+      <div class="flex items-center gap-2">
+        <i class="pi pi-linkedin"></i><span class="underline">@jacques-tea</span>
+      </div>
+    </a>
+    <a href="https://github.com/ExyiN">
+      <div class="flex items-center gap-2">
+        <i class="pi pi-github"></i><span class="underline">@ExyiN </span>
+      </div>
+    </a>
+  </div>
+  <ng-template #footer></ng-template>
+</p-panel>
