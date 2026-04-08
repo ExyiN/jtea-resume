@@ -1,18 +1,12 @@
 <p-panel>
-  <div class="flex py-12 px-4">
-    <div class="flex flex-col gap-6">
-      <p class="text-5xl font-bold">Jacques Tea</p>
-      <p class="text-3xl font-semibold">Ingénieur Développeur Fullstack</p>
-      <div class="flex gap-4 flex-wrap">
-        <p-button
-          label="Télécharger mon CV"
-          icon="pi pi-download"
-          iconPos="right"
-          severity="secondary"
-        />
-        <p-button label="Voir mon profil" icon="pi pi-chevron-right" iconPos="right" />
-      </div>
-    </div>
+  <div class="grid grid-cols-1 gap-4 place-items-center">
+    <p class="col-span-full md:text-5xl text-4xl font-black text-center">Jacques Tea</p>
+    <p class="col-span-full md:text-2xl text-xl font-semibold text-center">Ingénieur Développeur Fullstack</p>
+    <p-button
+      label="Télécharger mon CV"
+      icon="pi pi-download"
+      iconPos="right"
+    />
   </div>
   <ng-template #footer></ng-template>
 </p-panel>
