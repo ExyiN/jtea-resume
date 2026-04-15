@@ -38,5 +38,9 @@
   "soft-skills": {
     "title": "Savoir-être",
     "items": ["Force de proposition", "Curiosité", "Esprit d'équipe", "Autonomie"]
+  },
+  "languages": {
+    "title": "Langues",
+    "items": ["Anglais : TOEIC 890/990"]
   }
 }
