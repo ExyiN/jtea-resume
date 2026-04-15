@@ -10,5 +10,10 @@
         "hobbies": "Centres d'intérêt"
       }
     }
+  },
+  "home": {
+    "title": "Jacques Tea",
+    "subTitle": "Ingénieur Développeur Fullstack",
+    "downloadButtonLabel": "Télécharger mon CV"
   }
 }
