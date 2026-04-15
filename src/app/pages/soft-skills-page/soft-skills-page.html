@@ -1,11 +1,10 @@
 <p-panel class="h-full">
   <ng-template #header>
-    <p class="md:text-4xl text-3xl font-bold text-primary">Savoir-être</p>
+    <p class="md:text-4xl text-3xl font-bold text-primary">{{ 'soft-skills.title' | translate }}</p>
   </ng-template>
   <div class="grid grid-flow-col grid-rows-4 gap-1">
-    <p>Force de proposition</p>
-    <p>Curiosité</p>
-    <p>Esprit d'équipe</p>
-    <p>Autonomie</p>
+    @for (skill of getSkills() | async; track $index) {
+      <p>{{ skill }}</p>
+    }
   </div>
 </p-panel>

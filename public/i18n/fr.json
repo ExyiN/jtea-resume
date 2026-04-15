@@ -34,5 +34,9 @@
       "title": "Autres",
       "items": ["Git, Github", "Docker", "Agile Scrum"]
     }
+  },
+  "soft-skills": {
+    "title": "Savoir-être",
+    "items": ["Force de proposition", "Curiosité", "Esprit d'équipe", "Autonomie"]
   }
 }
