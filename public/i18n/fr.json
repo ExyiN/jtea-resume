@@ -19,5 +19,20 @@
   "profile": {
     "header": "Profil",
     "catchphrase": "Développeur motivé, curieux et capable de travailler dans un contexte international. Je suis à la recherche d'un poste de développeur Fullstack sur Angular et Java. Je suis ouvert à d'autres environnements"
+  },
+  "hard-skills": {
+    "header": "Compétences techniques",
+    "front-end": {
+      "title": "Front-end",
+      "items": ["Angular", "TypeScript", "RxJS, NgRx", "HTML5, CSS3", "TailwindCSS", "PrimeNG"]
+    },
+    "back-end": {
+      "title": "Back-end",
+      "items": ["Java", "Spring Boot", "API REST"]
+    },
+    "others": {
+      "title": "Autres",
+      "items": ["Git, Github", "Docker", "Agile Scrum"]
+    }
   }
 }
