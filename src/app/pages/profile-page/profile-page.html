@@ -1,12 +1,8 @@
 <p-panel>
   <ng-template #header>
-    <p class="md:text-4xl text-3xl font-bold text-primary">Profil</p>
+    <p class="md:text-4xl text-3xl font-bold text-primary">{{ 'profile.header' | translate }}</p>
   </ng-template>
-  <p>
-    Développeur motivé, curieux et capable de travailler dans un contexte international. Je suis à
-    la recherche d'un poste de développeur Fullstack sur Angular et Java. Je suis ouvert à d'autres
-    environnements
-  </p>
+  <p>{{ 'profile.catchphrase' | translate }}</p>
   <p-divider />
   <div class="grid lg:grid-cols-2 lg:grid-rows-3 lg:grid-flow-col grid-cols-1 gap-4">
     <a href="mailto:teajacques@gmail.com">
@@ -14,9 +10,9 @@
         <i class="pi pi-at"></i><span class="underline">teajacques@gmail.com</span>
       </div>
     </a>
-    <a href="tel:0695443217">
+    <a href="tel:+33695443217">
       <div class="flex items-center gap-2">
-        <i class="pi pi-mobile"></i><span class="underline">0695443217</span>
+        <i class="pi pi-mobile"></i><span class="underline">+33695443217</span>
       </div>
     </a>
     <div class="flex items-center gap-2">
