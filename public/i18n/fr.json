@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "items": {
+      "labels": {
+        "home": "Accueil",
+        "profile": "Profil",
+        "skills": "Compétences",
+        "experiences": "Expériences",
+        "education": "Formations",
+        "hobbies": "Centres d'intérêt"
+      }
+    }
+  }
+}

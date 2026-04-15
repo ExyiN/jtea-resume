@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
 import { RippleModule } from 'primeng/ripple';
@@ -9,7 +10,7 @@ import { ToggleThemeButton } from '../toggle-theme-button/toggle-theme-button';
 
 @Component({
   selector: 'app-navbar',
-  imports: [MenubarModule, RippleModule, TooltipModule, ToggleThemeButton],
+  imports: [MenubarModule, RippleModule, TooltipModule, ToggleThemeButton, TranslatePipe],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
@@ -20,28 +21,28 @@ export class Navbar implements OnInit {
   ngOnInit(): void {
     this.items = [
       {
+        id: 'home',
         icon: 'pi pi-home',
-        label: 'Accueil',
       },
       {
+        id: 'profile',
         icon: 'pi pi-user',
-        label: 'Profil',
       },
       {
+        id: 'skills',
         icon: 'pi pi-code',
-        label: 'Compétences',
       },
       {
+        id: 'experiences',
         icon: 'pi pi-building',
-        label: 'Expériences',
       },
       {
+        id: 'education',
         icon: 'pi pi-graduation-cap',
-        label: 'Formations',
       },
       {
+        id: 'hobbies',
         icon: 'pi pi-palette',
-        label: "Centres d'intérêt",
       },
     ];
   }
