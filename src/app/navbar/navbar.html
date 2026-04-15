@@ -3,12 +3,12 @@
     <a
       pRipple
       class="flex items-center gap-4 p-3 rounded-2xl"
-      [pTooltip]="item.label"
+      pTooltip="{{ 'navbar.items.labels.' + item.id | translate }}"
       tooltipPosition="bottom"
       [pTooltipPT]="tooltipPT"
     >
       <i [class]="item.icon"></i>
-      <span class="md:hidden">{{ item.label }}</span>
+      <span class="md:hidden">{{ 'navbar.items.labels.' + item.id | translate }}</span>
     </a>
   </ng-template>
   <ng-template #end>

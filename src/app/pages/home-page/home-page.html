@@ -10,8 +10,10 @@
   "
 >
   <div class="grid grid-cols-1 gap-4 place-items-center">
-    <p class="md:text-5xl text-4xl font-black text-center text-primary">Jacques Tea</p>
-    <p class="md:text-2xl text-xl font-semibold text-center">Ingénieur Développeur Fullstack</p>
-    <p-button label="Télécharger mon CV" icon="pi pi-download" iconPos="right" />
+    <p class="md:text-5xl text-4xl font-black text-center text-primary">
+      {{ 'home.title' | translate }}
+    </p>
+    <p class="md:text-2xl text-xl font-semibold text-center">{{ 'home.subTitle' | translate }}</p>
+    <p-button label="{{ 'home.downloadButtonLabel' | translate }}" icon="pi pi-download" iconPos="right" />
   </div>
 </div>
