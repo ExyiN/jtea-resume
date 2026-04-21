@@ -1,6 +1,6 @@
 <p-panel class="h-full">
   <ng-template #header>
-    <p class="md:text-4xl text-3xl font-bold text-primary">{{ 'soft-skills.title' | translate }}</p>
+    <p class="md:text-4xl text-3xl font-bold text-primary">{{ 'soft-skills.header' | translate }}</p>
   </ng-template>
   <div class="grid grid-flow-col grid-rows-4 gap-1">
     @for (skill of getSkills() | async; track $index) {
