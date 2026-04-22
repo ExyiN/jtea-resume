@@ -42,5 +42,75 @@
   "languages": {
     "header": "Langues",
     "items": ["Anglais : TOEIC 890/990"]
+  },
+  "experiences": {
+    "header": "Expériences professionnelles",
+    "items": [
+      {
+        "title": "Consultant développeur Fullstack",
+        "company": "OXiane",
+        "city": "Boulogne-Billancourt",
+        "zipCode": "92",
+        "type": "Alternance + CDI",
+        "startDate": "sept. 2022",
+        "endDate": "mai 2024",
+        "description": ["<p class=\"text-bold\">Test</p>"],
+        "tags": [
+          {
+            "value": "Angular"
+          },
+          {
+            "value": "TypeScript"
+          },
+          {
+            "value": "Java"
+          },
+          {
+            "value": "Spring Boot"
+          },
+          {
+            "value": "Git",
+            "severity": "secondary"
+          },
+          {
+            "value": "Docker",
+            "severity": "secondary"
+          },
+          {
+            "value": "AWS",
+            "severity": "secondary"
+          }
+        ]
+      },
+      {
+        "title": "Développeur Front-end",
+        "company": "EBP Informatique",
+        "city": "Rambouillet",
+        "zipCode": "78",
+        "type": "Stage",
+        "startDate": "juin 2022",
+        "endDate": "août 2022",
+        "description": ["<p class=\"text-bold\">Test</p>"],
+        "tags": [
+          {
+            "value": "Angular"
+          },
+          {
+            "value": "TypeScript"
+          },
+          {
+            "value": "NgRx"
+          },
+          {
+            "value": "Azure DevOps",
+            "severity": "secondary"
+          },
+          {
+            "value": "Git",
+            "severity": "secondary"
+          }
+        ]
+      }
+    ]
   }
 }
