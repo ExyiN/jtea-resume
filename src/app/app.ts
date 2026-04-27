@@ -1,16 +1,26 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { Navbar } from './navbar/navbar';
+import { EducationPage } from './pages/education-page/education-page';
+import { ExperiencesPage } from './pages/experiences-page/experiences-page';
 import { HardSkillsPage } from './pages/hard-skills-page/hard-skills-page';
 import { HomePage } from './pages/home-page/home-page';
 import { LanguagesPage } from './pages/languages-page/languages-page';
 import { ProfilePage } from './pages/profile-page/profile-page';
 import { SoftSkillsPage } from './pages/soft-skills-page/soft-skills-page';
 import { ThemeService } from './utils/theme-service';
-import { ExperiencesPage } from "./pages/experiences-page/experiences-page";
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, HomePage, ProfilePage, HardSkillsPage, SoftSkillsPage, LanguagesPage, ExperiencesPage],
+  imports: [
+    Navbar,
+    HomePage,
+    ProfilePage,
+    HardSkillsPage,
+    SoftSkillsPage,
+    LanguagesPage,
+    ExperiencesPage,
+    EducationPage,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

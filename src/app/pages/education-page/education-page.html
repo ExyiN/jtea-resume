@@ -1,0 +1,40 @@
+<p-panel>
+  <ng-template #header>
+    <p class="md:text-4xl text-3xl font-bold text-primary">
+      {{ 'education.header' | translate }}
+    </p>
+  </ng-template>
+  @for (education of educations; track $index) {
+    <div class="grid grid-cols-1 gap-2">
+      <div class="flex justify-between items-center flex-wrap gap-2">
+        <p class="text-lg font-semibold">{{ education.title }}</p>
+        <p-chip>
+          <div class="flex items-center justify-center gap-2 text-sm">
+            @if (education.endDate) {
+              <span>{{ education.startDate }}</span>
+              <i class="pi pi-arrow-right" style="font-size: 0.75rem"></i>
+              <span>{{ education.endDate }}</span>
+            } @else {
+              <span>{{ education.startDate }}</span>
+            }
+          </div>
+        </p-chip>
+      </div>
+      <div class="flex flex-wrap gap-2 items-center text-sm">
+        <div class="flex gap-1 items-center">
+          <i class="pi pi-building" style="font-size: 0.875rem"></i>
+          <p>{{ education.school }}</p>
+        </div>
+        <span>•</span>
+        <div class="flex gap-1 items-center">
+          <i class="pi pi-map-marker" style="font-size: 0.875rem"></i>
+          <p>{{ education.city }}</p>
+          <p>({{ education.zipCode }})</p>
+        </div>
+      </div>
+      @if (educations && $index < educations.length - 1) {
+        <p-divider />
+      }
+    </div>
+  }
+</p-panel>
