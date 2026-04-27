@@ -54,7 +54,17 @@
         "type": "Alternance + CDI",
         "startDate": "sept. 2022",
         "endDate": "mai 2024",
-        "description": ["<p class=\"text-bold\">Test</p>"],
+        "description": [
+          "<span class=\"font-semibold\">Mission chez Generali en tant qu’unique développeur du projet :</span>",
+          "<span class=\"ml-2\">• Projet à destination de l'équipe de gestion des changements afin de simplifier, accélérer et fiabiliser leur travail</span>",
+          "<span class=\"ml-2\">• Rédaction des spécifications fonctionnelles et techniques du projet</span>",
+          "<span class=\"ml-2\">• Développement d'une application en <span class=\"font-semibold\">Angular 16</span> afin de visualiser et modifier les changements</span>",
+          "<span class=\"ml-2\">• Développement d'une <span class=\"font-semibold\">API REST</span> avec <span class=\"font-semibold\">Spring Boot</span> en <span class=\"font-semibold\">Java 17</span></span>",
+          "<br />",
+          "<span class=\"font-semibold\">Projets internes :</span>",
+          "<span class=\"ml-2\">• Migration du Nexus vers le cloud AWS et en utilisant <span class=\"font-semibold\">Docker</span></span>",
+          "<span class=\"ml-2\">• Développement d'une interface avec <span class=\"font-semibold\">Angular 17</span> à destination des stagiaires de formation pour les travaux pratiques</span>"
+        ],
         "tags": [
           {
             "value": "Angular"
@@ -83,14 +93,24 @@
         ]
       },
       {
-        "title": "Développeur Front-end",
+        "title": "Développeur Front-end Angular",
         "company": "EBP Informatique",
         "city": "Rambouillet",
         "zipCode": "78",
         "type": "Stage",
         "startDate": "juin 2022",
-        "endDate": "août 2022",
-        "description": ["<p class=\"text-bold\">Test</p>"],
+        "endDate": "sept. 2022",
+        "description": [
+          "EBP souhaitait créer une nouvelle gamme d'applications SaaS (Comptabilité, Gestion commerciale, etc.) nommée Hubbix.",
+          "<span class=\"font-semibold\">Missions :</span>",
+          "<span class=\"ml-2\">• Travail sur deux fronts en <span class=\"font-semibold\">Angular 13</span> :</span>",
+          "<span class=\"ml-4\">• Un tableau de bord pour permettre aux clients de gérer les applications possédées, ainsi que les utilisateurs liés à leur domaine</span>",
+          "<span class=\"ml-4\">• Un front à destination des commerciaux et de l'assistance technique pour faire des propositions commerciales et répondre aux tickets des clients</span>",
+          "<span class=\"ml-2\">• Implémentation de divers éléments d'interfaces en collaboration avec l'équipe Back et l'équipe UI/UX design</span>",
+          "<span class=\"ml-2\">• Utilisation de <span class=\"font-semibold\">NgRx</span> pour gérer l'état de l'application</span>",
+          "<span class=\"ml-2\">• Travail en méthodologie Agile Scrum</span>",
+          "<span class=\"ml-2\">• Travail sur les tickets Azure DevOps avec le Product Manager</span>"
+        ],
         "tags": [
           {
             "value": "Angular"
@@ -107,6 +127,10 @@
           },
           {
             "value": "Git",
+            "severity": "secondary"
+          },
+          {
+            "value": "Agile",
             "severity": "secondary"
           }
         ]

@@ -3,6 +3,7 @@ import { _, TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ButtonDesignTokens } from '@primeuix/themes/types/button';
 import { ButtonModule } from 'primeng/button';
 import { ChipModule } from 'primeng/chip';
+import { DividerModule } from 'primeng/divider';
 import { PanelModule } from 'primeng/panel';
 import { TagModule } from 'primeng/tag';
 import { IconOnlyButtonStyle } from '../../../styles/button';
@@ -10,7 +11,7 @@ import { Experience } from './experience';
 
 @Component({
   selector: 'app-experiences-page',
-  imports: [PanelModule, TranslatePipe, ButtonModule, ChipModule, TagModule],
+  imports: [PanelModule, TranslatePipe, ButtonModule, ChipModule, TagModule, DividerModule],
   templateUrl: './experiences-page.html',
   styleUrl: './experiences-page.css',
 })

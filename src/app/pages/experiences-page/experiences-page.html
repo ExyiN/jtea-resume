@@ -21,18 +21,25 @@
           </div>
         </p-chip>
       </div>
-      <div class="flex flex-wrap gap-2 items-center">
+      <div class="flex flex-wrap gap-2 items-center text-sm">
         <div class="flex gap-1 items-center">
-          <i class="pi pi-building"></i>
+          <i class="pi pi-building" style="font-size: 0.875rem"></i>
           <p>{{ experiences[currentIndex()].company }}</p>
         </div>
         <span>•</span>
         <div class="flex gap-1 items-center">
-          <i class="pi pi-map-marker"></i>
+          <i class="pi pi-map-marker" style="font-size: 0.875rem"></i>
           <p>{{ experiences[currentIndex()].city }}</p>
           <p>({{ experiences[currentIndex()].zipCode }})</p>
         </div>
       </div>
+      <p-divider />
+      <div class="flex flex-col gap-1">
+        @for (line of experiences[currentIndex()].description; track $index) {
+          <p [innerHTML]="line"></p>
+        }
+      </div>
+      <p-divider />
       <div class="flex gap-1 flex-wrap">
         @for (tag of experiences[currentIndex()].tags; track $index) {
           <p-tag [value]="tag.value" [severity]="tag.severity" />
@@ -41,23 +48,25 @@
     </div>
   }
   <ng-template #footer>
-    <div class="flex justify-end gap-2">
-      <p-button
-        icon="pi pi-chevron-left"
-        [dt]="iconOnlyButtonStyle"
-        [text]="true"
-        severity="secondary"
-        [disabled]="currentIndex() <= 0"
-        (onClick)="incrementBy(-1)"
-      ></p-button>
-      <p-button
-        icon="pi pi-chevron-right"
-        [dt]="iconOnlyButtonStyle"
-        [text]="true"
-        severity="secondary"
-        [disabled]="currentIndex() >= experiences.length - 1"
-        (onClick)="incrementBy(1)"
-      ></p-button>
-    </div>
+    @if (experiences) {
+      <div class="flex justify-end gap-2">
+        <p-button
+          icon="pi pi-chevron-left"
+          [dt]="iconOnlyButtonStyle"
+          [text]="true"
+          severity="secondary"
+          [disabled]="currentIndex() <= 0"
+          (onClick)="incrementBy(-1)"
+        ></p-button>
+        <p-button
+          icon="pi pi-chevron-right"
+          [dt]="iconOnlyButtonStyle"
+          [text]="true"
+          severity="secondary"
+          [disabled]="currentIndex() >= experiences.length - 1"
+          (onClick)="incrementBy(1)"
+        ></p-button>
+      </div>
+    }
   </ng-template>
 </p-panel>
