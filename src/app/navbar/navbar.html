@@ -2,10 +2,11 @@
   <ng-template #item let-item>
     <a
       pRipple
-      class="flex items-center gap-4 p-3 rounded-2xl"
+      class="flex items-center gap-4 p-3 rounded-2xl cursor-pointer"
       pTooltip="{{ 'navbar.items.labels.' + item.id | translate }}"
       tooltipPosition="bottom"
       [pTooltipPT]="tooltipPT"
+      (click)="scrollToElement(`${item.id}-section`)"
     >
       <i [class]="item.icon"></i>
       <span class="md:hidden">{{ 'navbar.items.labels.' + item.id | translate }}</span>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
@@ -14,7 +15,8 @@ import { ToggleThemeButton } from '../toggle-theme-button/toggle-theme-button';
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
-export class Navbar implements OnInit {
+export class Navbar implements OnInit, AfterViewInit {
+  private scroller: ViewportScroller = inject(ViewportScroller);
   protected items?: MenuItem[];
   protected tooltipPT: TooltipPassThrough = MenubarTooltipPT;
 
@@ -34,7 +36,7 @@ export class Navbar implements OnInit {
       },
       {
         id: 'experiences',
-        icon: 'pi pi-building',
+        icon: 'pi pi-briefcase',
       },
       {
         id: 'education',
@@ -45,5 +47,17 @@ export class Navbar implements OnInit {
         icon: 'pi pi-palette',
       },
     ];
+  }
+
+  ngAfterViewInit(): void {
+    const navbar: HTMLElement | null = document.getElementById('navbar');
+    const fontSize: number = parseFloat(window.getComputedStyle(document.documentElement).fontSize);
+    if (navbar) {
+      this.scroller.setOffset([0, navbar.clientHeight + fontSize]);
+    }
+  }
+
+  protected scrollToElement(id: string) {
+    this.scroller.scrollToAnchor(id, { behavior: 'smooth' });
   }
 }
