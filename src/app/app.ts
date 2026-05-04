@@ -3,6 +3,7 @@ import { Navbar } from './navbar/navbar';
 import { EducationPage } from './pages/education-page/education-page';
 import { ExperiencesPage } from './pages/experiences-page/experiences-page';
 import { HardSkillsPage } from './pages/hard-skills-page/hard-skills-page';
+import { HobbiesPage } from './pages/hobbies-page/hobbies-page';
 import { HomePage } from './pages/home-page/home-page';
 import { LanguagesPage } from './pages/languages-page/languages-page';
 import { ProfilePage } from './pages/profile-page/profile-page';
@@ -20,6 +21,7 @@ import { ThemeService } from './utils/theme-service';
     LanguagesPage,
     ExperiencesPage,
     EducationPage,
+    HobbiesPage,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

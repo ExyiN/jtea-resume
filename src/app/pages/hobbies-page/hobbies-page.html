@@ -1,0 +1,10 @@
+<p-panel class="h-full">
+  <ng-template #header>
+    <p class="md:text-4xl text-3xl font-bold text-primary">{{ 'hobbies.header' | translate }}</p>
+  </ng-template>
+  <div class="grid grid-flow-col grid-rows-4 gap-1">
+    @for (hobbie of getHobbies() | async; track $index) {
+      <p>{{ hobbie }}</p>
+    }
+  </div>
+</p-panel>
