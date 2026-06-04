@@ -4,69 +4,49 @@
       {{ 'experiences.header' | translate }}
     </p>
   </ng-template>
-  @if (experiences) {
-    <div class="grid grid-cols-1 gap-2">
-      <div class="flex justify-between items-center flex-wrap gap-2">
-        <div class="flex items-center gap-2 flex-wrap">
-          <p class="text-lg font-semibold">{{ experiences[currentIndex()].title }}</p>
-          <p-chip>
-            <span class="text-sm">{{ experiences[currentIndex()].type }}</span>
-          </p-chip>
-        </div>
+  @for (experience of experiences; track $index) {
+  <div class="grid grid-cols-1 gap-2">
+    <div class="flex justify-between items-center flex-wrap gap-2">
+      <div class="flex items-center gap-2 flex-wrap">
+        <p class="text-lg font-semibold">{{ experience.title }}</p>
         <p-chip>
-          <div class="flex items-center justify-center gap-2 text-sm">
-            <span>{{ experiences[currentIndex()].startDate }}</span>
-            <i class="pi pi-arrow-right" style="font-size: 0.75rem"></i>
-            <span>{{ experiences[currentIndex()].endDate }}</span>
-          </div>
+          <span class="text-sm">{{ experience.type }}</span>
         </p-chip>
       </div>
-      <div class="flex flex-wrap gap-2 items-center text-sm">
-        <div class="flex gap-1 items-center">
-          <i class="pi pi-building" style="font-size: 0.875rem"></i>
-          <p>{{ experiences[currentIndex()].company }}</p>
+      <p-chip>
+        <div class="flex items-center justify-center gap-2 text-sm">
+          <span>{{ experience.startDate }}</span>
+          <i class="pi pi-arrow-right" style="font-size: 0.75rem"></i>
+          <span>{{ experience.endDate }}</span>
         </div>
-        <span>•</span>
-        <div class="flex gap-1 items-center">
-          <i class="pi pi-map-marker" style="font-size: 0.875rem"></i>
-          <p>{{ experiences[currentIndex()].city }}</p>
-          <p>({{ experiences[currentIndex()].zipCode }})</p>
-        </div>
+      </p-chip>
+    </div>
+    <div class="flex flex-wrap gap-2 items-center text-sm">
+      <div class="flex gap-1 items-center">
+        <i class="pi pi-building" style="font-size: 0.875rem"></i>
+        <p>{{ experience.company }}</p>
       </div>
-      <p-divider />
-      <div class="flex flex-col gap-1">
-        @for (line of experiences[currentIndex()].description; track $index) {
-          <p [innerHTML]="line"></p>
-        }
-      </div>
-      <p-divider />
-      <div class="flex gap-1 flex-wrap">
-        @for (tag of experiences[currentIndex()].tags; track $index) {
-          <p-tag [value]="tag.value" [severity]="tag.severity" />
-        }
+      <span>•</span>
+      <div class="flex gap-1 items-center">
+        <i class="pi pi-map-marker" style="font-size: 0.875rem"></i>
+        <p>{{ experience.city }}</p>
+        <p>({{ experience.zipCode }})</p>
       </div>
     </div>
-  }
-  <ng-template #footer>
-    @if (experiences) {
-      <div class="flex justify-end gap-2">
-        <p-button
-          icon="pi pi-chevron-left"
-          [dt]="iconOnlyButtonStyle"
-          [text]="true"
-          severity="secondary"
-          [disabled]="currentIndex() <= 0"
-          (onClick)="incrementBy(-1)"
-        ></p-button>
-        <p-button
-          icon="pi pi-chevron-right"
-          [dt]="iconOnlyButtonStyle"
-          [text]="true"
-          severity="secondary"
-          [disabled]="currentIndex() >= experiences.length - 1"
-          (onClick)="incrementBy(1)"
-        ></p-button>
-      </div>
-    }
-  </ng-template>
+    <p-divider type="dashed" />
+    <div class="flex flex-col gap-1">
+      @for (line of experience.description; track $index) {
+      <p [innerHTML]="line"></p>
+      }
+    </div>
+    <p-divider type="dashed" />
+    <div class="flex gap-1 flex-wrap">
+      @for (tag of experience.tags; track $index) {
+      <p-tag [value]="tag.value" [severity]="tag.severity" />
+      }
+    </div>
+  </div>
+  @if($index < experiences.length - 1) {
+  <p-divider />
+  } }
 </p-panel>
