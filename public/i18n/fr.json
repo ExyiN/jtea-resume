@@ -28,7 +28,7 @@
     },
     "back-end": {
       "title": "Back-end",
-      "items": ["Java", "Spring Boot", "API REST"]
+      "items": ["Java", "Spring Boot", "NestJS", "API REST"]
     },
     "others": {
       "title": "Autres",
@@ -167,6 +167,10 @@
   },
   "hobbies": {
     "header": "Centres d'intérêt",
-    "items": ["Jeux vidéo (Programmation sur Godot)", "Technologies (Hardware PC, Montage PC)", "Musique (Piano)"]
+    "items": [
+      "Jeux vidéo (Programmation sur Godot)",
+      "Technologies (Hardware PC, Montage PC)",
+      "Musique (Piano)"
+    ]
   }
 }
